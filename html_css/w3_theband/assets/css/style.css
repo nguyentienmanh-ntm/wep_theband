@@ -17,6 +17,27 @@ html {
     color: #fff !important;
 }
 
+.text-center {
+    text-align: center !important;
+}
+
+.row {
+    margin-left: -8px;
+    margin-right: -8px;
+}
+
+.col {
+    float: left;
+    padding-left: 8px;
+    padding-right: 8px;
+}
+
+.col-third {
+    width: 33.3333%;
+}
+
+
+
 #main {
 
 }
@@ -170,13 +191,6 @@ html {
     margin-top: 48px;
 }
 
-#content .member-item {
-    float: left;   
-    width: 33.33333%; 
-    text-align: center;
-    
-    
-}
 
 #content .member:-name {
     font-size: 15px;
@@ -199,6 +213,7 @@ html {
 .ticket-list {
     background-color: #fff;
     margin-top: 40px;
+    list-style: none;
 }
 
 .ticket-list li {
@@ -229,17 +244,18 @@ html {
     margin-top: -3px;
 }
 /* Place */
-.Place-list {
+.place-list {
     
-    margin: 32px -8px 0;
+   margin-top: 32px;
     padding-bottom: 48px;;
 
 }
-.place-item {
-    float: left;
-    width: 33.3333%;
-    padding: 0 8px;
+
+.col-half {
+    width: 50%;
 }
+
+
 .place-img {
     width: 100%;
     display: block;
@@ -289,9 +305,13 @@ html {
     bottom: 0;
     left: 0;
     background: rgba(0, 0, 0, 0.4   );
-    display: flex;
+    display: none;
     align-items: center;
     justify-content: center;
+}
+
+.modal.open {
+    display: flex;
 }
 .modal-container {
     background: #fff;
@@ -299,6 +319,7 @@ html {
     max-width: calc(100% -32px);
     min-height: 200px;
     position: relative;
+    animation: modalFaceIn ease 0.4;
 }
 
 .modal-header {
@@ -342,7 +363,7 @@ html {
     margin-bottom: 24px;    
 }
 
-#buy-tickets {
+#buy-tickets {  
     background: #009688;
     color: #fff;
     border: none;
@@ -364,4 +385,15 @@ html {
 
 .modal-footer a {
     color: #2196f3;
+}
+
+@keyframes modalFaceIn {
+    from {
+        opacity: 0;
+        transform: translate(-140px);
+    }
+    to {
+        opacity: 1;
+        transform: translate(0);
+    }
 }
