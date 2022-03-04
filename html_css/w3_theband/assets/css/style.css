@@ -6,6 +6,7 @@
 /* vi tri, size(width, height), kieu dang, ma sac */
 
 html {
+    scroll-behavior: smooth;
     font-family: Arial, Helvetica, sans-serif;
 
 }
@@ -25,6 +26,11 @@ html {
     margin-left: -8px;
     margin-right: -8px;
 }
+.row::after {
+    content: " ";
+    display: block;
+    clear: both;
+}
 
 .col {
     float: left;
@@ -32,8 +38,45 @@ html {
     padding-right: 8px;
 }
 
+.col-full {
+    width:100%;
+}
+
+
+.pul-right {
+    float: right !important;
+}
+
+.btn {
+    color: #fff;
+    background-color: #000;
+    text-decoration: none;
+    padding: 11px 16px;
+    display: inline-block;
+    margin-top: 15px;
+    boder: none;
+}
+
+.btn:hover {
+    background-color: #ccc;
+    cursor: pointer;
+    color: #000;
+}
+
 .col-third {
     width: 33.3333%;
+}
+
+.mt-8 {
+    margin-top: 8px !important;
+
+
+}
+
+.mt-8 {
+    margin-top: 16px !important;
+
+
 }
 
 
@@ -131,7 +174,7 @@ html {
    position: relative;
    margin-top: 46px;
    padding-top: 50%;
-   background: url('/assets/img/ekko.jpg') top center / cover no-repeat;
+   background: url('/assets/img/chicago.jpg') top center / cover no-repeat;
   
 }
 #slider .text-content {
@@ -160,7 +203,7 @@ html {
 }
 
 #content .content-section {
-    padding: 64px 0;
+    padding: 64px 0 112px;
     width: 800px;
     margin-right: auto;
     margin-left: auto;
@@ -247,7 +290,7 @@ html {
 .place-list {
     
    margin-top: 32px;
-    padding-bottom: 48px;;
+    
 
 }
 
@@ -281,22 +324,62 @@ html {
     margin-top: 15px;
     line-height:1.4;
 }
-.place-buy-btn {
-    color: #fff;
-    background-color: #000;
-    text-decoration: none;
-    padding: 11px 16px;
-    display: inline-block;
-    margin-top: 15px;
+
+
+/* Contact-form */
+.contact-content {
+    margin-top: 48px;
 }
 
-.place-buy-btn:hover {
-    background-color: #ccc;
+.contact-info {
+    font-size: 18px;
+    line-height: 1.4;
 }
+
+.contact-info i[class*="ti-"] {
+    width: 30px;
+    display: inline-block;
+}
+
+.contact-form {
+    font-size:15px;
+}
+.contact-form .form-control {
+    padding: 10px;
+    boder: 1px solid #ccc;
+    width: 100%;
+    outline: none;
+}
+
+.map-section img {
+    padding-top: 64px;
+    width: 100%;
+}
+
 
 #footer {
-
+    padding: 64px 16px;
+    text-align: center;
 }
+
+.social-list {
+    font-size:25px;
+}
+
+#footer .social-list a {
+    color: rgba(0, 0, 0, 0.6);  
+    text-decoration: none;
+}
+
+#footer .coppyright  {
+    margin-top: 15px;
+    color:rgba(0, 0, 0, 0.6);
+}
+
+#footer .social-list a:hover{
+    color: rgba(0, 0, 0, 0.4); 
+}
+
 
 .modal {
     position: fixed;
